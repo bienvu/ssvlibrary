@@ -3,21 +3,24 @@ input[type='submit'] {
   @extend .btn;
 }
 
+.form,
 %form-text {
   @include helvetica;
   appearance: none;
-  background-color: $white;
+  background: gray;
   border-radius: 0;
-  border: rem(1px) solid $text-color;
+  border: 0;
   box-shadow: inherit;
   box-sizing: border-box;
-  color: $text-color;
-  font-size: rem(16px);
+  color: blue;
+  font-size: 16px;
   font-weight: 400;
-  height: rem(48px);
-  padding: rem(7px 20px);
+  font-style: normal;
+  padding: 8px 14px 11px;
   transition: all .3s ease-in-out;
   width: 100%;
+  line-height: 1.5;
+  letter-spacing: 0;
 
   &::-ms-clear {
     display: none;
@@ -79,11 +82,13 @@ input[type='submit'] {
   }
 }
 
-input[type='tel'],
-.form-url,
-.form-search,
-.form-email,
-.form-text {
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="email"],
+input[type="password"],
+input[type="hidden"] {
   @extend %form-text;
 }
 

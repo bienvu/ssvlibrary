@@ -38,4 +38,9 @@
   &--white {
     background-color: $white;
   }
+
+  &--blue {
+    background: blue;
+    color: $white;
+  }
 }
