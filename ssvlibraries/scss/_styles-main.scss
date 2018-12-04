@@ -21,7 +21,7 @@
 
 //Base
 @import 'base/fonts';
-// @import 'base/icons';
+@import 'base/icons';
 @import 'base/grid';
 @import 'base/extends';
 @import 'base/typography';
@@ -36,7 +36,7 @@
 //@import 'vendors/chosen';
 
 // Components
-// @import 'components/block-example';
+@import 'components/accordion';
 
 // Layouts
 @import 'layouts/layout';
