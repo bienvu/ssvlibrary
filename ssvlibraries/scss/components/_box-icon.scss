@@ -6,11 +6,11 @@
     margin-bottom: 25px;
   }
 
-  &__content {
+  &__list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     margin: 0 -15px;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -41,6 +41,32 @@
 
       @media only screen and (min-width: $tablet) {
         width: 114px;
+      }
+    }
+  }
+
+  &--with-content {
+    .box-icon__list {
+      display: block;
+
+      @media only screen and (min-width: $tablet) {
+        display: flex;
+      }
+    }
+
+    .box-icon__item {
+      width: 100%;
+      text-align: left;
+      justify-content: initial;
+
+      @media only screen and (min-width: $tablet) {
+        width: 25%;
+      }
+    }
+
+    .box-icon__image {
+      img {
+        width: inherit;
       }
     }
   }
