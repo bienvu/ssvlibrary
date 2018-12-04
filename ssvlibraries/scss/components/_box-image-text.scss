@@ -1,0 +1,34 @@
+.box-image-text {
+  padding: 30px 0;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media only screen and (min-width: $tablet) {
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+
+  &__body {
+    width: 100%;
+
+    @media only screen and (min-width: $tablet) {
+      width: 50%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+
+    @media only screen and (min-width: $tablet) {
+      width: 50%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
