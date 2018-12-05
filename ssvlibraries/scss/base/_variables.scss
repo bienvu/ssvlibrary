@@ -4,7 +4,15 @@
 //Font variables
 $base-font-size: 16px;
 $base-line-height: 1.4;
+<<<<<<< HEAD
 $tablet: 768px;
+=======
+$mobileOnly: 767px;
+$tablet: 768px;
+$desktop: 1024px;
+$desktop-wide: 1280px;
+$desktop-superwide: 1440px;
+>>>>>>> 70aa3cc7dd387ae3f9b405b5ced60da3d037f0f5
 
 // Add global paths
 $image-path: '../images/';
