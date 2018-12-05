@@ -1,4 +1,4 @@
-.box-icon {
+.grid-icon {
   padding: 50px 0;
 
   h2 {
@@ -23,17 +23,12 @@
 
     @media only screen and (min-width: $tablet) {
       width: 20%;
-      flex-wrap: wrap;
       justify-content: center;
     }
   }
 
   &__image {
-    margin-bottom: 4px;
-
-    @media only screen and (min-width: $tablet) {
-      margin-bottom: 18px;
-    }
+    margin-bottom: 10px;
 
     img {
       width: 88px;
@@ -46,7 +41,7 @@
   }
 
   &--with-content {
-    .box-icon__list {
+    .grid-icon__list {
       display: block;
 
       @media only screen and (min-width: $tablet) {
@@ -54,7 +49,7 @@
       }
     }
 
-    .box-icon__item {
+    .grid-icon__item {
       width: 100%;
       text-align: left;
       justify-content: initial;
@@ -64,7 +59,7 @@
       }
     }
 
-    .box-icon__image {
+    .grid-icon__image {
       img {
         width: inherit;
       }
