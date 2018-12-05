@@ -39,3 +39,17 @@
     background-color: $white;
   }
 }
+
+// gird style
+.cols2 {
+  @include grid(2, 20px);
+}
+
+.cols3 {
+  @include grid(3, 20px);
+}
+
+.cols4 {
+  @include grid(4, 20px);
+}
+
