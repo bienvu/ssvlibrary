@@ -138,3 +138,59 @@ $margin: 10px;
     margin-bottom: $margin;
   }
 }
+
+.fsubs {
+  .form-item {
+    margin-bottom: $margin;
+
+    &:last-of-type {
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .form-actions {
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-list {
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+
+    .form-item {
+      @media only screen and (min-width: 768px) {
+        margin-bottom: $margin;
+      }
+    }
+  }
+
+  &--no-sub {
+    .form-list {
+      @media only screen and (min-width: 768px) {
+        position: relative;
+      }
+
+      .form-item {
+        @media only screen and (min-width: 768px) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .form-actions {
+      @media only screen and (min-width: 768px) {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        [type="submit"] {
+          font-size: 0;
+        }
+      }
+    }
+  }
+}
