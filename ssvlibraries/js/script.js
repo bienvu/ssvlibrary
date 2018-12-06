@@ -18,4 +18,15 @@
     }
   };
 
+  $('.js-read-more').click(function(e) {
+    e.preventDefault();
+    if($('.read-more').hasClass('is-show')) {
+      $('.read-more').removeClass('is-show');
+      $(this).text('READ MORE >');
+    }else {
+      $('.read-more').addClass('is-show');
+      $(this).text('READ LESS >');
+    }
+  });
+
 }(this, this.document, this.jQuery));

@@ -1,0 +1,14 @@
+.txt {
+  padding: 30px 0;
+
+  &--with-readmore {
+    .read-more {
+      display: none;
+      margin-top: 16px;
+
+      &.is-show {
+        display: block;
+      }
+    }
+  }
+}
