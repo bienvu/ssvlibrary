@@ -8,19 +8,16 @@
   // Add  functionality here.
 
   // accordion
-  $('.acc__title').each(function() {
-      $(this).on('click', function (e) {
-        if ($(this).hasClass('is-show')) {
-          $('.acc__title').removeClass('is-show');
-          $('.acc__body').slideUp();
-          $(this).next().slideUp();
-        } else {
-          $('.acc__title').removeClass('is-show');
-          $(this).addClass('is-show');
-          $('.acc__body').slideUp();
-          $(this).next().slideDown();
-        }
-    });
+  $('.js-accordion > div').children(2n).click(function() {
+    if ($(this).hasClass('is-show')) {
+      $(this).removeClass('is-show');
+      $(this).next().slideUp();
+    } else {
+      $(this).removeClass('is-show');
+      $(this).addClass('is-show');
+      $('.js-accordion > div').children(2n).next().slideUp();
+      $(this).next().slideDown();
+    }
   });
 
 
