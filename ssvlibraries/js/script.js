@@ -18,4 +18,13 @@
     }
   };
 
+  // masonry 
+  $(window).load(function() {
+    $('.js-masonry').masonry();
+  });
+
+  $(window).ready(function() {
+    $('.js-lightbox').lightGallery();
+  });
+
 }(this, this.document, this.jQuery));

@@ -15,13 +15,14 @@
 //Helpers functions
 @import 'helpers/functions';
 @import 'helpers/mixins';
+@import 'helpers/custom-vendor';
 
 // Reset
 @import 'base/reset';
 
 //Base
 @import 'base/fonts';
-// @import 'base/icons';
+@import 'base/icons';
 @import 'base/grid';
 @import 'base/extends';
 @import 'base/typography';
@@ -36,7 +37,7 @@
 //@import 'vendors/chosen';
 
 // Components
-// @import 'components/col';
+@import 'components/masonry';
 
 // Layouts
 @import 'layouts/layout';
