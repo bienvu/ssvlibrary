@@ -27,16 +27,4 @@
     border-color: $btn-color-hover;
     color: $white;
   }
-
-  span {
-    position: relative;
-    @extend .icon-arrow-right;
-
-    &:before {
-      @extend %icons;
-      position: absolute;
-      right: -20px;
-      top: 1px;
-    }
-  }
 }
