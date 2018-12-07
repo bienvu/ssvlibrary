@@ -1,5 +1,4 @@
 $margin: 15px;
-
 .bif {
   padding: 30px 0;
   background-image: url('../pattern-lab/source/images/box-info.jpg');
@@ -24,6 +23,8 @@ $margin: 15px;
   }
 
   &__body {
+    margin-bottom: 15px;
+
     @media only screen and (min-width: $tablet) {
       min-height: 140px;
     }
@@ -40,7 +41,7 @@ $margin: 15px;
     margin-bottom: $margin;
     background: $white;
     min-height: 300px;
-
+    height: 0px;
 
     @media only screen and (min-width: $tablet) {
       width: calc((100% - 31px)  / 3);
@@ -64,8 +65,9 @@ $margin: 15px;
     .bif__item {
       width: 100%;
       margin-right: 0;
-      margin-bottom: 20px;
+      margin-bottom: $margin;
       display: flex;
+      align-items: center;
     }
 
     .bif__content { 
@@ -74,6 +76,7 @@ $margin: 15px;
 
     .bif__image {
       width: 70%;
+      height: 100%;
 
       iframe {
         width: 100%;
