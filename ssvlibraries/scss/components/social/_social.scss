@@ -5,9 +5,26 @@
     display: flex;
     margin: 0 -20px;
 
-    li {
+     li {
       list-style-type: none;
-      padding: 0 5px;
+      margin: 0 5px;
+    }
+  }
+
+  &--no-desc {
+    .list-icons {
+      li {
+        width: 40px;
+        height: 40px;
+        background-color: $gray;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+      }
     }
   }
 }
