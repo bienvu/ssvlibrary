@@ -2,17 +2,12 @@
   padding: 30px 0;
 
   &__wrap {
-    display: flex;
-    flex-direction: column;
-
     @media only screen and (min-width: $tablet) {
-      flex-direction: row;
+      display: flex;
     }
   }
 
   &__title {
-    width: 100%;
-
     @media only screen and (min-width: $tablet) {
       width: 20%;
       padding-right: 30px;
@@ -20,8 +15,6 @@
   }
 
   &__body {
-    width: 100%;
-
     @media only screen and (min-width: $tablet) {
       width: 80%;
     }  
