@@ -1,5 +1,11 @@
-.txt {
+.box-html {
   padding: 30px 0;
+
+  p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 
   &--with-readmore {
     .read-more {
