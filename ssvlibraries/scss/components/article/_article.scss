@@ -71,11 +71,19 @@
   }
 
   &--type3 {
-    .article__body {
+    .article__title {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      position: relative;
 
-      p {
-        padding-top: 20px;
-        border-top: 1px solid black;
+      &:before {
+        content: '';
+        border-bottom: 1px solid black;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 5px;
       }
     }
   }

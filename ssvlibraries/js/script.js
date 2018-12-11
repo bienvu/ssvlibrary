@@ -21,11 +21,11 @@
   //js read more
   $('.js-read-more').click(function(e) {
     e.preventDefault();
-    if($('.read-more').hasClass('is-show')) {
-      $('.read-more').removeClass('is-show');
+    if($(this).parent().prev().children('.read-more').hasClass('is-show')) {
+      $(this).parent().prev().children('.read-more').removeClass('is-show');
       $(this).text('READ MORE');
     }else {
-      $('.read-more').addClass('is-show');
+      $(this).parent().prev().children('.read-more').addClass('is-show');
       $(this).text('READ LESS');
     }
   });
