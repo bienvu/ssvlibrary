@@ -7,9 +7,7 @@
   }
 
   &__list {
-    @media only screen and (min-width: $tablet) {
-      display: flex;
-    }
+    @include grid(3, 15px, 15px, space-around);
   }
 
   &__item {
