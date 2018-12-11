@@ -7,11 +7,8 @@
   }
 
   &__wrap {
-    display: flex;
-    flex-direction: column;
-
     @media only screen and (min-width: $tablet) {
-      flex-direction: row;
+      display: flex;
     }
   }
 
@@ -29,6 +26,15 @@
     }
   }
 
+  &__link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: initial;
+    display: none;
+  }
+
   &__image {
     img {
       width: 100%;
@@ -37,44 +43,29 @@
     span {
       display: none;
     }
-  }
-  
 
-  &--has-space {
-    .gim1__link {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      line-height: initial;
-      display: none;
-    }
+    a {
+      display: block;
+      position: relative;
 
-    .gim1__image {
+      &:hover:before {
+        visibility: visible;
+      }
 
-      a {
+      &:hover .gim1__link {
         display: block;
-        position: relative;
+      }
 
-        &:hover:before {
-          visibility: visible;
-        }
-
-        &:hover .gim1__link {
-          display: block;
-        }
-
-        &:before {
-          @media only screen and (min-width: 768px) {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba($black, .3);
-            visibility: hidden;
-          }
+      &:before {
+        @media only screen and (min-width: 768px) {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba($black, .3);
+          visibility: hidden;
         }
       }
     }

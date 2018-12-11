@@ -21,7 +21,7 @@
 
 //Base
 @import 'base/fonts';
-// @import 'base/icons';
+@import 'base/icons';
 @import 'base/grid';
 @import 'base/extends';
 @import 'base/typography';
@@ -33,7 +33,7 @@
 @import 'base/helpers';
 
 // Vendors
-//@import 'vendors/chosen';
+@import 'vendors/slick';
 
 // Components
 @import 'components/grid-image/grid-image';
