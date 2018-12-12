@@ -1,0 +1,21 @@
+$padding: 15px;
+
+.int {
+  @include grid(2, 0px);
+  padding: $padding 0;
+
+  &__title {
+    @media only screen and (min-width: $tablet) {
+      width: 20%;
+      padding-right: $padding;
+    }
+  }
+
+  & > &__body {
+    padding: $padding;
+    
+    @media only screen and (min-width: $tablet) {
+      width: 80%;
+    }  
+  }
+}
