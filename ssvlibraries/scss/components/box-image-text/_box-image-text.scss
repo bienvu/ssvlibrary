@@ -1,26 +1,17 @@
+$padding: 20px;
+
 .imt {
-  padding: 30px 0;
+  padding: $padding 0;
 
   &__wrap {
-    @media only screen and (min-width: $tablet) {
-      align-items: center;
-      display: flex;
-      flex-wrap: wrap;
-    }
+    @include grid(2, 0px);
   }
 
   &__body {
-    @media only screen and (min-width: $tablet) {
-      width: 50%;
-      padding-right: 50px;
-    }
+    padding: $padding;
   }
 
   &__image {
-    @media only screen and (min-width: $tablet) {
-      width: 50%;
-    }
-
     img {
       width: 100%;
       height: auto;
@@ -44,19 +35,6 @@
   &--image-left {
     .imt__wrap {
       flex-direction: row-reverse;
-    }
-
-    .imt__image {
-      @media only screen and (min-width: $tablet) {
-        width: 50%;
-        padding-right: 40px;
-      }
-    }
-
-    .imt__body {
-      @media only screen and (min-width: $tablet) {
-        width: 50%;
-      }
     }
   }
 }
