@@ -43,6 +43,21 @@
     }
   });
   
+  // sticky form
+  $('.fsticky__title').click(function(){
+      $('.fsticky').toggleClass('is-active');
+    });
+
+    $(window).click(function (e)
+      {
+        var container = $('.fsticky');
+        if (!container.is(e.target)
+          && container.has(e.target).length === 0)
+        {
+        container.removeClass('is-active');
+      }
+    })
+    
   //js slide
   $('.js-slide').slick();
 
