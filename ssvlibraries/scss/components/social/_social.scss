@@ -1,18 +1,38 @@
+$margin: 10px;
+$font-size: 20px;
+
 .soc {
   padding: 30px 0;
 
-  .list-icons {
+  &__list {
     display: flex;
-    margin: 0 -20px;
+    margin: 0;
+    padding: 0;
 
      li {
       list-style-type: none;
-      margin: 0 5px;
+      margin-right: $margin;
+
+      [class^='icon-'] {
+        font-size: 0;
+
+        &:before {
+          font-size: $font-size;
+        }
+      }
+    }
+  }
+
+  &__des {
+    margin-bottom: $margin;
+    
+    p:last-of-type {
+      margin: 0;
     }
   }
 
   &--no-desc {
-    .list-icons {
+    .soc__list {
       li {
         width: 40px;
         height: 40px;
