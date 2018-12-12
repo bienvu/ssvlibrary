@@ -1,34 +1,38 @@
 $margin: 15px;
+$height: 300px;
+
 .bif {
-  padding: 30px 0;
+  padding: $margin 0;
   background-image: url('../pattern-lab/source/images/box-info.jpg');
   background-size: cover;
   background-position: center;
 
   &__title {
-    margin-bottom: 15px;
+    margin-bottom: $margin;
   }
 
   &__list {
+    @include grid(3, $margin);
     text-align: center;
-
-    @media only screen and (min-width: $tablet) {
-      display: flex;
-      justify-content: center;
-    }
   }
 
   &__content {
-    padding: 15px;
+    padding: $margin;
+    display: flex;
+    flex-direction: column;
+    min-height: $height;
+    height: 0px;
+
+    > div {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    margin-top: auto;
   }
 
   &__body {
-    margin-bottom: 15px;
-
-    @media only screen and (min-width: $tablet) {
-      min-height: 140px;
-    }
-
     p {
       &:last-of-type {
         margin-bottom: 0;
@@ -37,25 +41,17 @@ $margin: 15px;
   }
 
   &__item {
-    width: 100%;
-    margin-bottom: $margin;
     background: $white;
-    min-height: 300px;
-    
+    min-height: $height;
 
     @media only screen and (min-width: $tablet) {
-      width: calc((100% - 31px)  / 3);
-      margin-right: $margin;
-      margin-bottom: 0;
-
-      &:last-child {
-        margin-right: 0;
-      }
+      height: 0px;
     }
   }
 
   &--with-map {
-    background: $white;
+    background-color: $white;
+    background-image: none;
 
     .bif__list {
       display: block;
@@ -63,34 +59,26 @@ $margin: 15px;
     }
 
     .bif__item {
+      @include grid(2, 0px);
+      align-items: stretch;
       width: 100%;
-      margin-right: 0;
-      margin-bottom: $margin;
 
-      @media only screen and (min-width: $tablet) {
-        display: flex;
-        align-items: center;
-        height: 0px;
-      }
-    }
-
-    .bif__content {
-      @media only screen and (min-width: $tablet) {
-        width: 30%;
-      }
-    }
-
-    .bif__image {
-      @media only screen and (min-width: $tablet) {
-        width: 70%;
-        height: 100%;
-      }
-
-      iframe {
-        width: 100%;
+      > .bif__content {
+        height: auto;
 
         @media only screen and (min-width: $tablet) {
-          height: 100%;
+          width: 30%;
+          height: 0;
+        }
+      }
+
+      > .bif__image {
+        @media only screen and (min-width: $tablet) {
+          width: 70%;
+        }
+
+        iframe {
+          width: 100%;
         }
       }
     }
