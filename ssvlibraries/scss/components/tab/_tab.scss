@@ -1,0 +1,23 @@
+.tab {
+  padding: 30px 0;
+  
+  &__title {
+    display: flex;
+    margin: 0 -30px 30px;
+
+    li {
+      list-style-type: none;
+      padding: 0 15px;
+    }
+  }
+
+  &__content {
+    > div {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}

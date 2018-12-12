@@ -17,5 +17,10 @@
       }
     }
   };
+  console.log($('.js-tab').children());
+  $('.js-tab').children().click(function(e) {
+    $('.is-tab-content').children().removeClass('active');
+    $('.is-tab-content').children()[$(this).index()].classList.add('active');
+  });
 
 }(this, this.document, this.jQuery));
