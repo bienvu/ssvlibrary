@@ -8,14 +8,14 @@
   // Add  functionality here.
 
   // accordion
-  $('.js-accordion > div').children(2n).click(function() {
+  $('.js-accordion').children().children(2n).click(function() {
     if ($(this).hasClass('is-show')) {
       $(this).removeClass('is-show');
       $(this).next().slideUp();
     } else {
-      $(this).removeClass('is-show');
+      $('.js-accordion').children().children(2n).removeClass('is-show');
+      $('.js-accordion').children().children(2n).next().slideUp();
       $(this).addClass('is-show');
-      $('.js-accordion > div').children(2n).next().slideUp();
       $(this).next().slideDown();
     }
   });
