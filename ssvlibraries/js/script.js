@@ -32,4 +32,7 @@
     }
   };
 
+  //js slide
+  $('.js-slide').slick();
+
 }(this, this.document, this.jQuery));

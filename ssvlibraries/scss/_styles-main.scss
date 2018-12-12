@@ -15,6 +15,7 @@
 //Helpers functions
 @import 'helpers/functions';
 @import 'helpers/mixins';
+// @import 'helpers/override-vendor';
 
 // Reset
 @import 'base/reset';
@@ -33,10 +34,12 @@
 @import 'base/helpers';
 
 // Vendors
-//@import 'vendors/chosen';
+@import 'vendors/slick';
 
 // Components
 @import 'components/accordion/accordion';
+@import 'components/box-image-text/box-image-text';
+@import 'components/grid-icon/grid-icon';
 
 // Layouts
 @import 'layouts/layout';
