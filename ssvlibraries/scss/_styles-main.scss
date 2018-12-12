@@ -15,13 +15,14 @@
 //Helpers functions
 @import 'helpers/functions';
 @import 'helpers/mixins';
+// @import 'helpers/override-vendor';
 
 // Reset
 @import 'base/reset';
 
 //Base
 @import 'base/fonts';
-// @import 'base/icons';
+@import 'base/icons';
 @import 'base/grid';
 @import 'base/extends';
 @import 'base/typography';
@@ -33,10 +34,17 @@
 @import 'base/helpers';
 
 // Vendors
-//@import 'vendors/chosen';
+@import 'vendors/slick';
 
 // Components
 @import 'components/box-intro/box-intro';
+@import 'components/box-text/box-text';
+@import 'components/box-form/box-form';
+@import 'components/social/social';
+@import 'components/box-info/box-info';
+@import 'components/accordion/accordion';
+@import 'components/box-image-text/box-image-text';
+@import 'components/grid-icon/grid-icon';
 
 // Layouts
 @import 'layouts/layout';
