@@ -1,4 +1,6 @@
-.box-text {
+// here is box text
+$margin : 10px;
+.txt {
   padding: 30px 0;
 
   p {
@@ -7,10 +9,13 @@
     }
   }
 
+  &__description {
+    margin-bottom: $margin;
+  }
+  // box text with read more
   &--with-readmore {
     .read-more {
       display: none;
-      margin-top: 16px;
 
       &.is-show {
         display: block;
