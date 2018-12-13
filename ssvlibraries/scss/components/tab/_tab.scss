@@ -1,13 +1,23 @@
 .tab {
-  padding: 30px 0;
+  padding: 30px;
+
+  ul {
+    margin-bottom: 0;
+    padding-left: 0;
+  }
   
   &__title {
-    display: flex;
-    margin: 0 -30px 30px;
+    @media only screen and (min-width: $tablet) {
+      display: flex;
+      margin: 0 -30px 30px;
+    }
 
     li {
       list-style-type: none;
-      padding: 0 15px;
+
+      @media only screen and (min-width: $tablet) {
+        padding: 0 15px;
+      }
     }
   }
 
@@ -17,6 +27,22 @@
 
       &.active {
         display: block;
+      }
+    }
+  }
+
+  .tablinks {
+    &:before {
+      @extend %icons;
+      @extend .icon-arrow-right;
+      transform: rotate(89deg);
+      position: absolute;
+      transition: .5s;
+      font-size: 14px;
+      right: 20px;
+
+      @media only screen and (min-width: $tablet) {
+        display: none;
       }
     }
   }
