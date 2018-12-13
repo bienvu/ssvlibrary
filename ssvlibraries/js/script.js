@@ -59,6 +59,12 @@
     })
     
   //js slide
-  $('.js-slide').slick();
+  $('.js-slide').slick({
+    prevArrow: '<span class="slick-prev"></span>',
+    nextArrow: '<span class="slick-next"></span>',
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: true
+  });
 
 }(this, this.document, this.jQuery));

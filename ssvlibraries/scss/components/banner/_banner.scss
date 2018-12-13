@@ -1,0 +1,224 @@
+%height-ban {
+  @media only screen and (min-width: $tablet) {
+    height: 440px !important;
+  }
+
+  @media only screen and (min-width: $desktop) {
+    height: 487px !important;
+  }
+
+  @media only screen and (min-width: $desktop-superwide) {
+    height: 650px !important;
+  }
+}
+
+.ban {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  @extend %height-ban;
+
+  span {
+    background: none;
+  }
+
+  &__image {
+    overflow: hidden;
+    height: 250px;
+    position: relative;
+
+    @media only screen and (min-width: $tablet) {
+      height: 100% !important;
+    }
+
+    > span,
+    > a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+
+    a:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9;
+      content: '';
+    }
+
+    img {
+      max-width: inherit;
+      height: 100%;
+      width: auto;
+      position: absolute;
+
+      @media only screen and (max-width: 1365px) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      @media only screen and (max-width: mobileOnly) {
+        width: 100%;
+        height: auto;
+      }
+
+      @media only screen and (min-width: $tablet) {
+        height: 100%;
+        width: auto;
+      }
+
+      @media only screen and (min-width: 1366px) {
+        width: 102%;
+        height: auto;
+        top: 0;
+        right: 0;
+        transform: none;
+      }
+    }
+  }
+
+  &__wrap {
+    @media only screen and (min-width: $tablet) {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
+      padding: 0;
+    }
+  }
+
+  &__body {
+    @media only screen and (min-width: $tablet) {
+      max-width: 360px;
+      margin-left: 60px;
+    }
+
+    .best-advice {
+      padding: 15px;
+
+      @media only screen and (min-width: $tablet) {
+        display: block;
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    min-height: 300px;
+    background-color: $white;
+
+    @media only screen and (max-width: mobileOnly) {
+      margin: 0;
+      display: flex;
+      min-height: 200px;
+    }
+  }
+
+  &__desc {
+    p:last-of-type {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    margin-top: auto;
+
+    @media only screen and (min-width: $tablet) {
+      position: absolute;
+      bottom: -20px;
+    }
+  }
+
+  &__subtitle {
+    padding: 30px;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-transform: lowercase;
+    background-color: $white;
+  }
+
+  &__item {
+    position: relative;
+    @extend %height-ban;
+  }
+
+  &__image-title {
+    margin: -15px 0 25px;
+
+    img {
+      width: 400px;
+      height: auto;
+    }
+  }
+
+  &--default {
+    .ban__image {
+      margin: 0;
+    }
+
+    .ban__content {
+      min-height: inherit;
+      padding: 0;
+      margin-left: 30px;
+
+      @media only screen and (min-width: $tablet) {
+        padding: 30px;
+        margin-bottom: 15px;
+        margin-left: 0;
+      }
+    }
+
+    .ban__body {
+      max-width: 400px;
+
+      @media only screen and (max-width: mobileOnly) {
+        position: relative;
+        margin-top: -30px;
+        max-width: inherit;
+        margin-bottom: 30px;
+      }
+
+      .best-advice {
+        padding: 0 30px;
+      }
+    }
+
+    .ban__wrap {
+      @media only screen and (min-width: $tablet) {
+        top: 50%;
+      }
+    }
+
+    .ban__subtitle {
+      @media only screen and (max-width: mobileOnly) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &--width-slide {
+    opacity: 0;
+
+    &.slick-slider {
+      opacity: 1;
+    }
+
+    @media only screen and (max-width: mobileOnly) {
+      margin-bottom: -20px;
+
+      .ban__content {
+        background-color: transparent;
+      }
+    }
+  }
+}

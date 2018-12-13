@@ -32,6 +32,7 @@
 
 //Helpers classes
 @import 'base/helpers';
+@import 'helpers/override-vendor';
 
 // Vendors
 @import 'vendors/slick';
@@ -46,6 +47,9 @@
 @import 'components/accordion/accordion';
 @import 'components/box-image-text/box-image-text';
 @import 'components/grid-icon/grid-icon';
+@import 'components/banner/banner';
+@import 'components/banner/ban2';
+@import 'components/banner/ban1';
 
 // Layouts
 @import 'layouts/layout';
