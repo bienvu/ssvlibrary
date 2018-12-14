@@ -64,7 +64,13 @@
     nextArrow: '<span class="slick-next"></span>',
     autoplay: true,
     autoplaySpeed: 3000,
-    dots: true
+    dots: true,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        dots: false
+      }
+    }]
   });
 
 }(this, this.document, this.jQuery));

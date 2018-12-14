@@ -19,10 +19,7 @@
 
   &__body {
     max-width: 400px;
-
-    @media only screen and (min-width: $tablet) {
-      margin-top: 50px;
-    }
+    margin: 0;
 
     .best-advice {
       display: none;
@@ -78,6 +75,8 @@
   }
 
   &--default {
+    position: relative;
+
     .ban__image {
       margin: 0;
     }
@@ -101,7 +100,7 @@
 
     .ban__wrap {
       @media only screen and (min-width: $tablet) {
-        top: 25%;
+        top: 50%;
       }
     }
 
