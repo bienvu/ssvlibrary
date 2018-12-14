@@ -54,6 +54,8 @@
     }
 
     &.slick-active{
+      color: $white;
+
       button{
         background: $white;
       }

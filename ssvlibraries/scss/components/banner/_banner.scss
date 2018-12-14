@@ -29,6 +29,7 @@
 
       @media only screen and (min-width: $desktop) {
         display: block;
+        padding: 30px 20px;
       }
 
       &:before {
@@ -61,11 +62,15 @@
   }
 
   &__subtitle {
-    padding: 10px;
+    padding: 10px 0;
     display: inline-block;
     margin-bottom: 10px;
     text-transform: lowercase;
     background-color: $white;
+
+    @media only screen and (min-width: $tablet) {
+      padding: 10px 30px;
+    }
   }
 
   &__item {
@@ -103,6 +108,12 @@
     .ban__subtitle {
       @media only screen and (max-width: mobileOnly) {
         margin-bottom: 5px;
+      }
+    }
+
+    .best-advice {
+      @media only screen and (min-width: $tablet) {
+        padding: 0 30px;
       }
     }
   }
