@@ -4,7 +4,7 @@
   padding: 30px 0;
 
   &__item {
-    width: 33.33%;
+    width: 50%;
     position: relative;
 
     @media only screen and (min-width: $tablet) {
@@ -55,18 +55,23 @@
       }
 
       &:nth-of-type(5n) {
-        margin-right: 0
+        margin-right: 0;
+
+        .member__name {
+          left: inherit;
+          right: 0;
+        }
       }
     }
 
     .member__name {
-      bottom: -23%;
+      bottom: -20%;
       left: 0;
       transform: translate(0, 0);
       -ms-transform: translate(0, 0);
       text-align: left;
-      width: 204%;
       z-index: 1;
+      min-width: 400px;
     }
 
     .text {
