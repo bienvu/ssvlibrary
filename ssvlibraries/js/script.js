@@ -18,10 +18,35 @@
     }
   };
 
-  $('.js-tab').children().click(function(e) {
-    $('.is-tab-content').children().removeClass('active');
-    $('.is-tab-content').children()[$(this).index()].classList.add('active');
+  // js index
+  ($('.js-index')).click(function(e) {
+    var index = $(this).index();
+    $('.js-index').removeClass('active');
+    $(this).addClass('active');
+
+    $('.is-index').each(function() {
+      if($(this).index() == index) {
+        $('.is-index').removeClass('active');
+        $(this).addClass('active');
+      }
+    });
+  });
+
+  // js show
+  $('.js-show').click(function(){
+    if($(this).hasClass('is-focus')) {
+      $(this).toggleClass('active');
+    }
+
+    if($(this).next('.show').hasClass('active')) {
+      $('.tab__content, .js-show').removeClass('active');
+      $(this).next('.show');
+    } else {
+      $('.tab__content, .js-show').removeClass('active');
+      $('.js-show').next('.show');
+      $(this).next('.show').addClass('active');
+      $(this).addClass('active');
+    }
   });
 
 }(this, this.document, this.jQuery));
-

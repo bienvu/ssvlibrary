@@ -1,49 +1,141 @@
 .tab {
-  padding: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 
-  ul {
-    margin-bottom: 0;
-    padding-left: 0;
-  }
-  
-  &__title {
-    @media only screen and (min-width: $tablet) {
-      display: flex;
-      margin: 0 -30px 30px;
+  &__wrap {
+    @media only screen and (min-width: 768px) {
+      padding: 0 50px;
     }
 
-    li {
-      list-style-type: none;
+    > ul {
+      display: none;
 
-      @media only screen and (min-width: $tablet) {
-        padding: 0 15px;
+      @media only screen and (min-width: 768px) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      li {
+        list-style-type: none;
+
+        @media only screen and (min-width: 768px) {
+          padding: 0 30px 0 0;
+        }
+
+        &.active {
+          span {
+            @media only screen and (min-width: 768px) {
+              border-bottom: 2px solid;
+            }
+          }
+        }
+
+        span {
+          display: inline-block;
+          border-bottom: 2px solid transparent;
+          padding: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__body {
+    @media only screen and (min-width: 768px) {
+      border-top: 2px solid;
+    }
+
+    > ul {
+      > li {
+        list-style-type: none;
+
+        @media only screen and (min-width: 768px) {
+          display: none;
+        }
+
+        &:last-of-type {
+          border-bottom: 2px solid;
+
+          @media only screen and (min-width: 768px) {
+            border-bottom: 0;
+          }
+        }
+
+        &.active {
+          @media only screen and (min-width: 768px) {
+            display: block;
+
+            .tab__content {
+              display: block;
+            }
+          }
+        }
+
+        > span {
+          display: inline-block;
+          width: 100%;
+          position: relative;
+          padding: 15px;
+          cursor: pointer;
+
+          @media only screen and (min-width: 768px) {
+            display: none;
+          }
+
+          &.active {
+            i {
+              transform: translateY(-50%) rotate(270deg);
+            }
+          }
+
+          i {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+          }
+        }
       }
     }
   }
 
   &__content {
-    > div {
-      display: none;
+    display: none;
+    padding: 15px;
 
-      &.active {
+
+    @media only screen and (min-width: 768px) {
+      max-width: 450px;
+    }
+
+    &.active {
+      display: block;
+    }
+
+    @media only screen and (min-width: 768px) {
+      background: none;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 15px;
+
+      a {
         display: block;
       }
     }
-  }
 
-  .tablinks {
-    &:before {
-      @extend %icons;
-      @extend .icon-arrow-right;
-      transform: rotate(89deg);
-      position: absolute;
-      transition: .5s;
-      font-size: 14px;
-      right: 20px;
+    ul li {
+      list-style: disc;
+    }
 
-      @media only screen and (min-width: $tablet) {
-        display: none;
-      }
+    ol li {
+      list-style: decimal;
     }
   }
 }
