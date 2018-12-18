@@ -1,0 +1,41 @@
+$margin: 20px;
+$padding: 20px 0;
+
+.grid-icon {
+  padding: $padding;
+
+  &__list {
+    @include grid(5, 10px);
+    align-items: flex-start;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__image {
+    margin-bottom: $margin;
+    line-height: 0;
+    text-align: center;
+
+    img {
+      width: 100px;
+      height: auto;
+
+      @media only screen and (min-width: $tablet) {
+        width: 120px;
+      }
+    }
+  }
+
+  &__item {
+    padding: $padding;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &--with-content {
+  }
+}

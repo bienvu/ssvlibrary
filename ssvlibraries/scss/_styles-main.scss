@@ -34,10 +34,20 @@
 @import 'base/helpers';
 
 // Vendors
-//@import 'vendors/chosen';
+@import 'vendors/slick';
 
 // Components
 @import 'components/masonry/masonry';
+@import 'components/article/article';
+@import 'components/grid-content/grid-content';
+@import 'components/box-intro/box-intro';
+@import 'components/box-text/box-text';
+@import 'components/box-form/box-form';
+@import 'components/social/social';
+@import 'components/box-info/box-info';
+@import 'components/accordion/accordion';
+@import 'components/box-image-text/box-image-text';
+@import 'components/grid-icon/grid-icon';
 
 // Layouts
 @import 'layouts/layout';
