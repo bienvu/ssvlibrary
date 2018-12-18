@@ -1,0 +1,54 @@
+// light box
+.lg-actions .lg-next {
+  &:before {
+    @extend .icon-arrow-right:before;
+  }
+}
+
+.lg-actions .lg-prev {
+  &:after {
+    @extend .icon-arrow-left:before;
+  }
+}
+
+.lg-outer #lg-share {
+  &:after {
+    @extend .icon-share1:before;
+  }
+}
+
+#lg-zoom-out {
+  &:after {
+    @extend .icon-zoom-out:before;
+  }
+}
+
+#lg-zoom-in {
+  &:after {
+    @extend .icon-zoom-in:before;
+  }
+}
+
+.lg-actions .lg-fullscreen {
+  &:before {
+    
+  }
+}
+
+.lg-actions .lg-autoplay-button {
+  &:before {
+
+  }
+}
+
+.lg-fullscreen:after {
+  @extend .icon-fullscreen:before;
+}
+
+.lg-toolbar .lg-close:after {
+  @extend .icon-Close:before;
+}
+
+.lg-icon {
+  @extend %icons;
+}
