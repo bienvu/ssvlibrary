@@ -1,29 +1,19 @@
+$margin: 20px;
+$padding: 20px;
+
 .gim1 {
-  padding: 30px 0;
+  padding: $padding 0;
 
   .section-title {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: $margin;
   }
 
   &__wrap {
-    @media only screen and (min-width: $tablet) {
-      display: flex;
-    }
+    @include grid(2, $margin);
   }
 
   &__item {
-    width: 100%;
-    margin-bottom: 20px;
-
-    @media only screen and (min-width: $tablet) {
-      width: calc((100% - 61px) / 3);
-      margin-right: 30px;
-    }
-
-    &:last-of-type {
-      margin-right: 0;
-    }
   }
 
   &__link {
@@ -31,13 +21,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    line-height: initial;
     display: none;
   }
 
   &__image {
+    line-height: 0;
+
     img {
       width: 100%;
+      height: auto;
     }
 
     span {
