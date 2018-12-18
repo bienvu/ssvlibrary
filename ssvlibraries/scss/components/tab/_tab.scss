@@ -1,16 +1,9 @@
 .tab {
-  margin-top: 30px;
-  margin-bottom: 30px;
-
   &__wrap {
-    @media only screen and (min-width: 768px) {
-      padding: 0 50px;
-    }
-
     > ul {
       display: none;
 
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: $tablet) {
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -19,13 +12,13 @@
       li {
         list-style-type: none;
 
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: $tablet) {
           padding: 0 30px 0 0;
         }
 
         &.active {
           span {
-            @media only screen and (min-width: 768px) {
+            @media only screen and (min-width: $tablet) {
               border-bottom: 2px solid;
             }
           }
@@ -35,35 +28,34 @@
           display: inline-block;
           border-bottom: 2px solid transparent;
           padding: 5px;
-          cursor: pointer;
         }
       }
     }
   }
 
   &__body {
-    @media only screen and (min-width: 768px) {
-      border-top: 2px solid;
+    @media only screen and (min-width: $tablet) {
+      border-top: 2px solid black;
     }
 
     > ul {
       > li {
         list-style-type: none;
 
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: $tablet) {
           display: none;
         }
 
         &:last-of-type {
-          border-bottom: 2px solid;
+          border-bottom: 2px solid black;
 
-          @media only screen and (min-width: 768px) {
+          @media only screen and (min-width: $tablet) {
             border-bottom: 0;
           }
         }
 
         &.active {
-          @media only screen and (min-width: 768px) {
+          @media only screen and (min-width: $tablet) {
             display: block;
 
             .tab__content {
@@ -77,9 +69,8 @@
           width: 100%;
           position: relative;
           padding: 15px;
-          cursor: pointer;
 
-          @media only screen and (min-width: 768px) {
+          @media only screen and (min-width: $tablet) {
             display: none;
           }
 
@@ -104,38 +95,8 @@
     display: none;
     padding: 15px;
 
-
-    @media only screen and (min-width: 768px) {
-      max-width: 450px;
-    }
-
     &.active {
       display: block;
-    }
-
-    @media only screen and (min-width: 768px) {
-      background: none;
-    }
-
-    a {
-      text-decoration: underline;
-    }
-
-    ul, ol {
-      padding-left: 20px;
-      margin-bottom: 15px;
-
-      a {
-        display: block;
-      }
-    }
-
-    ul li {
-      list-style: disc;
-    }
-
-    ol li {
-      list-style: decimal;
     }
   }
 }

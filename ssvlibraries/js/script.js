@@ -34,15 +34,11 @@
 
   // js show
   $('.js-show').click(function(){
-    if($(this).hasClass('is-focus')) {
-      $(this).toggleClass('active');
-    }
-
     if($(this).next('.show').hasClass('active')) {
-      $('.tab__content, .js-show').removeClass('active');
+      $('.js-content, .js-show').removeClass('active');
       $(this).next('.show');
     } else {
-      $('.tab__content, .js-show').removeClass('active');
+      $('.js-content, .js-show').removeClass('active');
       $('.js-show').next('.show');
       $(this).next('.show').addClass('active');
       $(this).addClass('active');
