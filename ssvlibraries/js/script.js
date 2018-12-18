@@ -21,11 +21,11 @@
   //js read more
   $('.js-read-more').click(function(e) {
     e.preventDefault();
-    if($(this).parent().prev().children('.read-more').hasClass('is-show')) {
-      $(this).parent().prev().children('.read-more').removeClass('is-show');
+    if($(this).prev().find('.read-more').hasClass('is-show')) {
+      $(this).prev().find('.read-more').removeClass('is-show');
       $(this).text('READ MORE');
     }else {
-      $(this).parent().prev().children('.read-more').addClass('is-show');
+      $(this).prev().find('.read-more').addClass('is-show');
       $(this).text('READ LESS');
     }
   });
