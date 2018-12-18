@@ -20,7 +20,7 @@
 
   // masonry 
   $(window).load(function() {
-    $('.js-masonry').masonry();
+    $('.js-mas').masonry();
   });
 
   $(window).ready(function() {
