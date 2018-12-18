@@ -1,0 +1,86 @@
+$margin: 15px;
+$height: 300px;
+
+.bif {
+  padding: $margin 0;
+  background-image: url('../pattern-lab/source/images/box-info.jpg');
+  background-size: cover;
+  background-position: center;
+
+  &__title {
+    margin-bottom: $margin;
+  }
+
+  &__list {
+    @include grid(3, $margin);
+    text-align: center;
+  }
+
+  &__content {
+    padding: $margin;
+    display: flex;
+    flex-direction: column;
+    min-height: $height;
+    height: 0px;
+
+    > div {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    margin-top: auto;
+  }
+
+  &__body {
+    p {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__item {
+    background: $white;
+    min-height: $height;
+
+    @media only screen and (min-width: $tablet) {
+      height: 0px;
+    }
+  }
+
+  &--with-map {
+    background-color: $white;
+    background-image: none;
+
+    .bif__list {
+      display: block;
+      text-align: left;
+    }
+
+    .bif__item {
+      @include grid(2, 0px);
+      align-items: stretch;
+      width: 100%;
+
+      > .bif__content {
+        height: auto;
+
+        @media only screen and (min-width: $tablet) {
+          width: 30%;
+          height: 0;
+        }
+      }
+
+      > .bif__image {
+        @media only screen and (min-width: $tablet) {
+          width: 70%;
+        }
+
+        iframe {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
