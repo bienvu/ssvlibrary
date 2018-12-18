@@ -31,15 +31,16 @@
       }
     }
   };
-
+  
+  //js read more
   $('.js-read-more').click(function(e) {
     e.preventDefault();
-    if($('.read-more').hasClass('is-show')) {
-      $('.read-more').removeClass('is-show');
-      $(this).text('READ MORE >');
+    if($(this).prev().find('.read-more').hasClass('is-show')) {
+      $(this).prev().find('.read-more').removeClass('is-show');
+      $(this).text('READ MORE');
     }else {
-      $('.read-more').addClass('is-show');
-      $(this).text('READ LESS >');
+      $(this).prev().find('.read-more').addClass('is-show');
+      $(this).text('READ LESS');
     }
   });
   
