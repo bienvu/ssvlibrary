@@ -1,0 +1,44 @@
+$padding: 10px;
+
+.acc {
+  padding: $padding;
+
+  &__title {
+    border-top: 1px solid $black;
+    padding: $padding;
+    margin-bottom: 0;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      @extend %icons;
+      @extend .icon-arrow-right;
+      transform: translateY(-50%) rotate(90deg);
+      position: absolute;
+      transition: .5s;
+      font-size: 15px;
+      right: 0;
+      top: 50%;
+    }
+
+    &.is-show {
+      &:before {
+        transform: translateY(-50%) rotate(-90deg);
+      }
+    }
+  }
+
+  &__item {
+    &:last-of-type {
+      border-bottom: 1px solid $black;
+    }
+  }
+
+  &__body {
+    display: none;
+
+    p:last-of-type {
+      margin: 0;
+    }
+  }
+}

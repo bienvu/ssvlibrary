@@ -7,6 +7,20 @@
     tablet = "(min-width:48em)"; // 768px.
   // Add  functionality here.
 
+  // accordion
+  $('.js-accordion').children().children(2n).click(function() {
+    if ($(this).hasClass('is-show')) {
+      $(this).removeClass('is-show');
+      $(this).next().slideUp();
+    } else {
+      $('.js-accordion').children().children(2n).removeClass('is-show');
+      $('.js-accordion').children().children(2n).next().slideUp();
+      $(this).addClass('is-show');
+      $(this).next().slideDown();
+    }
+  });
+
+
   // Table responsive
   Drupal.behaviors.tableResponsive = {
     attach: function (context, settings) {
@@ -17,7 +31,7 @@
       }
     }
   };
-
+  
   //js read more
   $('.js-read-more').click(function(e) {
     e.preventDefault();
@@ -29,5 +43,23 @@
       $(this).text('READ LESS');
     }
   });
+  
+  // sticky form
+  $('.fsticky__title').click(function(){
+      $('.fsticky').toggleClass('is-active');
+    });
+
+    $(window).click(function (e)
+      {
+        var container = $('.fsticky');
+        if (!container.is(e.target)
+          && container.has(e.target).length === 0)
+        {
+        container.removeClass('is-active');
+      }
+    })
+    
+  //js slide
+  $('.js-slide').slick();
 
 }(this, this.document, this.jQuery));
