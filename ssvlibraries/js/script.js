@@ -71,4 +71,18 @@
     $('.js-lightbox').lightGallery();
   });
 
+  $(document).ready(function(){
+    //parallax
+    $scroll = $('.js-parallax').offset().top - $(window).height();
+    $vel = .1;
+    console.log($scroll);
+    
+    $(this).scroll(function(){
+      if($(this).scrollTop() > $scroll) {
+        $scrollWidth = +($(this).scrollTop() - $scroll) * $vel + 'px';
+        $('.js-parallax').children().first().css('transform', 'translateY(' + $scrollWidth + ')');
+      }
+    });
+  });
+
 }(this, this.document, this.jQuery));
