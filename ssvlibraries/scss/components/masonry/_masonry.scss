@@ -1,0 +1,54 @@
+$margin: 5px;
+
+.mas {
+  list-style: none;
+  padding: 0;
+  margin: 0 -$margin;
+
+  li {
+    padding: $margin;
+    cursor: pointer;
+    width: calc((100% -1px) / 3);
+
+    @media only screen and (max-width: $mobileOnly) {
+      width: calc((100% - 1px) / 2);
+    }
+
+    > div {
+      position: relative;
+    }
+  }
+
+  &__bg {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: $black;
+    transition: .5s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    span {
+      @extend %icons;
+      position: absolute;
+      bottom: $margin;
+      right: $margin;
+      color: $white;
+      font-size: 0;
+
+      &:before {
+        @extend .icon-zoom-in:before;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__image {
+    line-height: 0;
+  }
+}

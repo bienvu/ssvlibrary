@@ -15,7 +15,7 @@
 //Helpers functions
 @import 'helpers/functions';
 @import 'helpers/mixins';
-// @import 'helpers/override-vendor';
+@import 'helpers/custom-vendor';
 
 // Reset
 @import 'base/reset';
@@ -37,6 +37,7 @@
 @import 'vendors/slick';
 
 // Components
+@import 'components/masonry/masonry';
 @import 'components/article/article';
 @import 'components/grid-content/grid-content';
 @import 'components/box-intro/box-intro';

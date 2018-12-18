@@ -62,4 +62,13 @@
   //js slide
   $('.js-slide').slick();
 
+  // masonry 
+  $(window).load(function() {
+    $('.js-mas').masonry();
+  });
+
+  $(window).ready(function() {
+    $('.js-lightbox').lightGallery();
+  });
+
 }(this, this.document, this.jQuery));
