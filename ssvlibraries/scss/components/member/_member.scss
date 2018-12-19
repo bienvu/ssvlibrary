@@ -1,15 +1,12 @@
 .member {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 30px 0;
+  &__wrap {
+    @include grid(5);
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   &__item {
-    width: 50%;
     position: relative;
-
-    @media only screen and (min-width: $tablet) {
-      width: 20%;
-    }
 
     img {
       width: 100%;
@@ -31,7 +28,6 @@
     bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     text-align: center;
   }
 
@@ -45,15 +41,11 @@
 
   //member--with-desc
   &--with-desc {
+    .member__wrap {
+      @include grid(5);
+    }
+
     .member__item {
-      width: calc((100% - 41px) / 3);
-      margin-right: 20px;
-
-      @media only screen and (min-width: $tablet) {
-        width: calc((100% - 41px) / 5);
-        margin-right: 10px;
-      }
-
       &:nth-of-type(5n) {
         margin-right: 0;
 
@@ -68,10 +60,9 @@
       bottom: -20%;
       left: 0;
       transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
       text-align: left;
       z-index: 1;
-      min-width: 400px;
+      min-width: 300px;
     }
 
     .text {
