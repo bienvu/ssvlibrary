@@ -98,3 +98,39 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+.slick-prev,
+.slick-next {
+  min-width: 43px;
+  min-height: 43px;
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  font-size: 0 ;
+  cursor: pointer;
+
+  @media only screen and (min-width: 768px) {
+    background: $black;
+  }
+
+  &:before {
+    @extend %icons;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+  }
+}
+
+.slick-prev {
+    @extend .icon-arrow-left;
+    left: 0;
+}
+
+.slick-next {
+    @extend .icon-arrow-right;
+    right: 0;
+}

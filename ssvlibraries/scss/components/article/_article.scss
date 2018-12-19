@@ -1,0 +1,69 @@
+$padding: 20px;
+$margin: 20px;
+
+.art {
+  padding: $padding;
+
+  &__item {
+    display: flex;
+  }
+
+  &__image {
+    line-height: 0;
+  }
+
+  &__body {
+    padding: 0 $padding $padding;
+
+    p {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    @media only screen and (min-width: $tablet) {
+      width: 70%;
+    }
+  }
+
+  &__description {
+    margin-bottom: 10px;
+  }
+
+  .read-more {
+    display: none;
+
+    &.is-show {
+      display: inline;
+    }
+  }
+
+  &--type2 {
+    .art__list {
+      @include grid(2, $margin);
+      align-items: inherit;
+    }
+  }
+
+  &--type3 {
+    .art__list {
+      @include grid(2, $margin);
+      align-items: inherit;
+    }
+
+    .art__title {
+      padding-bottom: 5px;
+      position: relative;
+
+      &:before {
+        content: '';
+        background: $black;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 1px;
+      }
+    }
+  }
+}

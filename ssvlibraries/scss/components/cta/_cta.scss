@@ -1,0 +1,31 @@
+
+
+.cta {
+  height: 400px;
+  position: relative;
+
+  &__image {
+    line-height: 0;
+    position: fixed;
+    z-index: -1;
+    bottom: 300px;
+    left: 0;right: 0;
+    top: 0;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+  }
+}

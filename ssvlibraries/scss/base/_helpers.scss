@@ -25,6 +25,11 @@
       @extend %link--white;
     }
   }
+  
+  //Blue Colors
+  &--blue {
+    color: $blue;
+  }
 }
 
 // Backgrounds
@@ -37,6 +42,15 @@
   // Light backgrounds
   &--white {
     background-color: $white;
+  }
+
+  &--gray {
+    background-color: $gray;
+  }
+  
+  //background dark-blue
+  &--dark-blue {
+    background-color: $dark-blue
   }
 }
 
