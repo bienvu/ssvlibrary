@@ -85,4 +85,13 @@
     });
   });
 
+  //slick for grid-image
+  $(".js-slick-test").slick({
+    slidesToShow: 1,
+    // autoplay: true,
+    autoplaySpeed: 2000,
+    dots: true,
+    arrows: false
+  });
+
 }(this, this.document, this.jQuery));
