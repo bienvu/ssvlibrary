@@ -46,7 +46,7 @@ $padding: 20px;
       }
 
       &:before {
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: $tablet) {
           content: "";
           position: absolute;
           top: 0;
@@ -59,7 +59,8 @@ $padding: 20px;
       }
     }
   }
-
+  
+  //gim1--with-slide
   &--with-slide {
     .gim1__wrap {
       display: block;
@@ -69,11 +70,5 @@ $padding: 20px;
         margin: 0;
       }
     }
-
-    // .slick-active {
-    //   @media only screen and (max-width: $tablet) {
-    //     width: 100%;
-    //   }
-    // }
   }
 }
