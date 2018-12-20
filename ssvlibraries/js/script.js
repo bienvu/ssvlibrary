@@ -91,7 +91,16 @@
     autoplay: false,
     autoplaySpeed: 2000,
     dots: false,
-    arrows: true
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+    ]
   });
 
   $(".js-slick-test").slick({
