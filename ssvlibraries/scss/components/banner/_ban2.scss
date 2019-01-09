@@ -1,0 +1,21 @@
+.ban2 {
+  &__wrap {
+    position: relative;
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 0;
+    box-shadow: 5px 5px 5px 5px #888888;
+  }
+}
