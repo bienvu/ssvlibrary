@@ -46,5 +46,26 @@ $padding: 20px;
         content: '\201d';
       }
     }
+
+  .slick-dots {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-30%);
+    bottom: 0;
+  }
+
+    li {
+      cursor: pointer;
+      margin-right: 20px;
+
+      &.slick-active {
+        color: $white;
+      }
+
+      button {
+        display: none;
+      }
+    }
   }
 }
