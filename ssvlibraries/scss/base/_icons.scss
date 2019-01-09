@@ -19,6 +19,21 @@
   }
 }
 
+.icon-fullscreen:before {
+  content: "\e90b";
+}
+.icon-enlarge:before {
+  content: "\e90c";
+}
+.icon-share1:before {
+  content: "\e919";
+}
+.icon-Close:before {
+  content: "\e91c";
+}
+.icon-google-plus:before {
+  content: "\e913";
+}
 .icon-user:before {
   content: "\e910";
 }
@@ -32,13 +47,13 @@
   content: "\e90d";
 }
 .icon-linkedin:before {
-  content: "\e90c";
+  content: "\e911";
 }
 .icon-search:before {
   content: "\e904";
 }
 .icon-pinterest:before {
-  content: "\e911";
+  content: "\e912";
 }
 .icon-instagram:before {
   content: "\e901";
