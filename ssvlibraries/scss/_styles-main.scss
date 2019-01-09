@@ -32,12 +32,16 @@
 
 //Helpers classes
 @import 'base/helpers';
+@import 'helpers/override-vendor';
 
 // Vendors
 @import 'vendors/slick';
 
 // Components
 @import 'components/tab/tab';
+@import 'components/grid-image/grid-image';
+@import 'components/grid-image/grid-image1';
+@import 'components/testimonial/testimonial';
 @import 'components/cta/cta';
 @import 'components/masonry/masonry';
 @import 'components/article/article';
@@ -50,6 +54,9 @@
 @import 'components/accordion/accordion';
 @import 'components/box-image-text/box-image-text';
 @import 'components/grid-icon/grid-icon';
+@import 'components/banner/banner';
+@import 'components/banner/ban2';
+@import 'components/banner/ban1';
 
 // Layouts
 @import 'layouts/layout';

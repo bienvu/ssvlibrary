@@ -1,0 +1,23 @@
+.ban1 {
+  overflow: hidden;
+
+  span {
+    background: none;
+  }
+
+  &__item {
+    @media only screen and (min-width: $tablet) {
+      position: relative;
+    }
+  }
+
+  &__content {
+    @media only screen and (min-width: $tablet) {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

@@ -20,7 +20,6 @@
     }
   });
 
-
   // Table responsive
   Drupal.behaviors.tableResponsive = {
     attach: function (context, settings) {
@@ -87,7 +86,19 @@
     })
     
   //js slide
-  $('.js-slide').slick();
+  $('.js-slide').slick({
+    prevArrow: '<span class="slick-prev"></span>',
+    nextArrow: '<span class="slick-next"></span>',
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: true,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        dots: false
+      }
+    }]
+  });
 
   // masonry 
   $(window).load(function() {
@@ -110,6 +121,34 @@
         $('.js-parallax').children().first().css('transform', 'translateY(' + $scrollWidth + ')');
       }
     });
+  });
+
+  //slick for grid-image
+
+  $(".js-slick").slick({
+    slidesToShow: 3,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    dots: false,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+    ]
+  });
+
+  $(".js-slick-test").slick({
+    slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots: true,
+    arrows: false
+
   });
 
 }(this, this.document, this.jQuery));
