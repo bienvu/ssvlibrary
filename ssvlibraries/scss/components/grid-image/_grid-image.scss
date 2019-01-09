@@ -1,0 +1,65 @@
+$margin: 20px;
+$padding: 20px;
+.gim {
+  padding: $padding 0;
+
+  &__wrap {
+    @include grid(3, $margin);
+  }
+
+  &__item {
+    position: relative;
+
+    &:hover {
+      .gim__body {
+        display: block;
+      }
+    }
+  }
+
+  &__image {
+    line-height: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: $padding;
+    display: flex;
+    align-items: center;
+  }
+
+  &__body {
+    display: none;
+    color: $white;
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: $padding;
+  }
+
+  &--2cols {
+    .gim__wrap {
+      @include grid(2, $margin);
+    }
+  }
+  
+  //grid-image--4cols;
+  &--4cols {
+    .gim__wrap {
+      @include grid(4, $margin);
+    }
+  }
+}

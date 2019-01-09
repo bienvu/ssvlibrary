@@ -15,7 +15,7 @@
 //Helpers functions
 @import 'helpers/functions';
 @import 'helpers/mixins';
-// @import 'helpers/override-vendor';
+@import 'helpers/custom-vendor';
 
 // Reset
 @import 'base/reset';
@@ -32,12 +32,32 @@
 
 //Helpers classes
 @import 'base/helpers';
+@import 'helpers/override-vendor';
 
 // Vendors
 @import 'vendors/slick';
 
 // Components
 @import 'components/member/member';
+@import 'components/tab/tab';
+@import 'components/grid-image/grid-image';
+@import 'components/grid-image/grid-image1';
+@import 'components/testimonial/testimonial';
+@import 'components/cta/cta';
+@import 'components/masonry/masonry';
+@import 'components/article/article';
+@import 'components/grid-content/grid-content';
+@import 'components/box-intro/box-intro';
+@import 'components/box-text/box-text';
+@import 'components/box-form/box-form';
+@import 'components/social/social';
+@import 'components/box-info/box-info';
+@import 'components/accordion/accordion';
+@import 'components/box-image-text/box-image-text';
+@import 'components/grid-icon/grid-icon';
+@import 'components/banner/banner';
+@import 'components/banner/ban2';
+@import 'components/banner/ban1';
 
 // Layouts
 @import 'layouts/layout';
