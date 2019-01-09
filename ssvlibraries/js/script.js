@@ -59,7 +59,19 @@
     })
     
   //js slide
-  $('.js-slide').slick();
+  $('.js-slide').slick({
+    prevArrow: '<span class="slick-prev"></span>',
+    nextArrow: '<span class="slick-next"></span>',
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: true,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        dots: false
+      }
+    }]
+  });
 
   // masonry 
   $(window).load(function() {
@@ -105,7 +117,7 @@
 
   $(".js-slick-test").slick({
     slidesToShow: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     dots: true,
     arrows: false
