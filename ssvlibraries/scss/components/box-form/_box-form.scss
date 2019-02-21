@@ -107,6 +107,7 @@ $margin: 10px;
     padding: 20px;
     background: $white;
     position: fixed;
+    
     // equal width of form
     right: -221px;
     top: 50%;
@@ -129,7 +130,6 @@ $margin: 10px;
     transform: rotate(-90deg);
     white-space: nowrap;
     margin: 0;
-    background: red;
   }
 
   .form-actions {
@@ -171,7 +171,7 @@ $margin: 10px;
       }
     }
   }
-  
+
   // box form with subtitle no submit button
   &--no-sub {
     .form-list {

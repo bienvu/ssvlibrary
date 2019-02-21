@@ -30,7 +30,7 @@
       }
     }
   };
-  
+
   //js read more
   $('.js-read-more').click(function(e) {
     e.preventDefault();
@@ -42,7 +42,7 @@
       $(this).text('READ LESS');
     }
   });
-  
+
   // sticky form
   $('.fsticky__title').click(function(){
       $('.fsticky').toggleClass('is-active');
@@ -84,12 +84,12 @@
         container.removeClass('is-active');
       }
     })
-    
+
   //js slide
   $('.js-slide').slick({
     prevArrow: '<span class="slick-prev"></span>',
     nextArrow: '<span class="slick-next"></span>',
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     dots: true,
     responsive: [{
@@ -100,7 +100,7 @@
     }]
   });
 
-  // masonry 
+  // masonry
   $(window).load(function() {
     $('.js-mas').masonry();
   });
@@ -109,19 +109,18 @@
     $('.js-lightbox').lightGallery();
   });
 
-  $(document).ready(function(){
-    //parallax
-    $scroll = $('.js-parallax').offset().top - $(window).height();
-    $vel = .1;
-    console.log($scroll);
-    
-    $(this).scroll(function(){
-      if($(this).scrollTop() > $scroll) {
-        $scrollWidth = +($(this).scrollTop() - $scroll) * $vel + 'px';
-        $('.js-parallax').children().first().css('transform', 'translateY(' + $scrollWidth + ')');
-      }
-    });
-  });
+  // $(document).ready(function(){
+  //   //parallax
+  //   $scroll = $('.js-parallax').offset().top - $(window).height();
+  //   $vel = .1;
+  //
+  //   $(this).scroll(function(){
+  //     if($(this).scrollTop() > $scroll) {
+  //       $scrollWidth = +($(this).scrollTop() - $scroll) * $vel + 'px';
+  //       $('.js-parallax').children().first().css('transform', 'translateY(' + $scrollWidth + ')');
+  //     }
+  //   });
+  // });
 
   //slick for grid-image
 
