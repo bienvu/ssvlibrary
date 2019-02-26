@@ -12,11 +12,9 @@ $margin: 20px;
     @include grid(3, 15px);
   }
 
-  &__item {
-  }
-
   &__image {
     line-height: 0;
+    margin-bottom: 20px;
 
     img {
       width: 100%;

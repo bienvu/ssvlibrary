@@ -5,15 +5,23 @@ $margin: 20px;
   padding: $padding;
 
   &__item {
-    display: flex;
+    @media only screen and (min-width: $tablet) {
+      display: flex;
+      margin-bottom: $margin;
+    }
   }
 
   &__image {
     line-height: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__body {
-    padding: 0 $padding $padding;
+    padding: $padding 0;   
 
     p {
       &:last-of-type {
@@ -23,6 +31,7 @@ $margin: 20px;
 
     @media only screen and (min-width: $tablet) {
       width: 70%;
+      padding: 0 $padding $padding;
     }
   }
 
@@ -46,9 +55,8 @@ $margin: 20px;
   }
 
   &--type3 {
-    .art__list {
-      @include grid(2, $margin);
-      align-items: inherit;
+    .art__item {
+      margin-bottom: 30px;
     }
 
     .art__title {

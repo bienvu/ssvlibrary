@@ -13,12 +13,17 @@
     }
   }
 
+  &__picture {
+    line-height: 0;
+  }
+
   &__image {
     opacity: 1;
     display: block;
     width: 100%;
     height: auto;
     transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   &__name {
@@ -27,16 +32,21 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+    color: #fff;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 0 27px 20px;
     text-align: center;
+
   }
 
   .member__item:hover .member__picture {
-    opacity: 1;
+    opacity: 1
   }
 
   .member__item:hover .member__name {
-    opacity: 1;
+      opacity: 1;
   }
 
   //member--with-desc
@@ -54,20 +64,49 @@
           right: 0;
         }
       }
+
+      &:after {
+        border: 1px solid red;
+        position: absolute;
+      }
+    }
+
+    .member__item:hover .member__name {
+      @media only screen and (min-width: $tablet) {
+        opacity: 1;
+        visibility: visible;        
+      }
+    }
+
+    .member__item:hover .member__picture::after {
+      @media only screen and (min-width: $tablet) {
+        opacity: 1;
+        visibility: visible;        
+      }
+    }
+
+    .member__content {
+      position: relative;
+      padding-top: 17px;
     }
 
     .member__name {
-      bottom: -20%;
+      z-index: 2;
+      width: 432px;
+      opacity: 0;
+      visibility: hidden;
+      background: #f0f3f5;
+      top: 0;
       left: 0;
+      bottom: inherit;
       transform: translate(0, 0);
-      text-align: left;
-      z-index: 1;
-      min-width: 300px;
+      padding: 30px;
     }
 
     .text {
-      padding: 15px;
-      background: $gray;
+      color: #000;
+      text-align: left;
+      text-transform: initial;
     }
   }
 }

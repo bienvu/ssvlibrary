@@ -51,9 +51,8 @@ $padding: 20px;
     display: flex;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-4%);
     bottom: 0;
-    justify-content: center;
   }
 
     li {
@@ -67,6 +66,10 @@ $padding: 20px;
       button {
         display: none;
       }
+    }
+
+    .test__author {
+      margin-bottom: 30px;
     }
   }
 }
