@@ -37,5 +37,17 @@ $padding: 20px 0;
   }
 
   &--with-content {
+    .grid-icon__image {
+      text-align: left;
+
+      img {
+        width: 50px;
+      }
+    }
+
+    .grid-icon__title {
+      text-align: left;
+      margin-bottom: 20px;
+    }
   }
 }

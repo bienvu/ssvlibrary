@@ -43,6 +43,15 @@ $padding: 20px;
 
       &:hover .gim1__link {
         display: block;
+
+        @media only screen and (min-width: $tablet) {
+          width: -webkit-fill-available;
+          text-align: center;
+        }
+
+        @media only screen and (min-width: $desktop) {
+          width: inherit;
+        }
       }
 
       &:before {

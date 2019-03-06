@@ -40,6 +40,16 @@ $padding: 20px;
   &__body {
     display: none;
     color: $white;
+
+    @media only screen and (min-width: $tablet) {
+      overflow-x: auto;
+      max-height: 100%;
+      margin: 30px 0 10px;
+    }
+
+    @media only screen and (min-width: $desktop) {
+      margin-top: 0;
+    }
   }
 
   &__title {
@@ -48,6 +58,15 @@ $padding: 20px;
     right: 0;
     left: 0;
     padding: $padding;
+    line-height: 1;
+
+    @media only screen and (min-width: $tablet) {
+      padding: 5px $padding;
+    }
+
+    @media only screen and (min-width: $desktop) {
+      padding: $padding;
+    }
   }
 
   &--2cols {

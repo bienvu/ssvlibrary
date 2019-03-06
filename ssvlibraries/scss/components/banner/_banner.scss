@@ -13,8 +13,7 @@
   }
 
   &__image {
-    width: auto;
-    height: 100%;
+    line-height: 0;
 
     img {
       width: 100%;
@@ -25,6 +24,10 @@
   &__body {
     max-width: 400px;
     margin: 0;
+
+    @media only screen and (min-width: $tablet) {
+      margin: 0 50px;
+    }
 
     .best-advice {
       display: none;
@@ -46,9 +49,18 @@
     position: relative;
     background-color: $white;
     min-height: 200px;
+
+    @media only screen and (min-width: $tablet) {
+      margin-top: 40px;
+    }
   }
 
   &__desc {
+    margin-bottom: 20px;
+
+    @media only screen and (min-width: $tablet) {
+      margin-bottom: 0
+    }
     p:last-of-type {
       margin: 0;
     }
@@ -59,7 +71,14 @@
 
     @media only screen and (min-width: $tablet) {
       position: absolute;
-      bottom: -30px;
+      bottom: -20px;
+    }
+  }
+
+  &__title {
+    @media only screen and (min-width: $tablet) {
+      margin-bottom: 20px;
+      line-height: 1;
     }
   }
 
@@ -71,6 +90,10 @@
     background-color: $white;
 
     @media only screen and (min-width: $tablet) {
+      padding: 5px 15px;
+    }
+
+    @media only screen and (min-width: $desktop) {
       padding: 10px 30px;
     }
   }
@@ -89,8 +112,14 @@
     .ban__content {
       min-height: inherit;
       padding: 0;
+      margin-top: 0;
 
       @media only screen and (min-width: $tablet) {
+        padding: 10px 30px;
+        margin-bottom: 10px;
+      }
+
+      @media only screen and (min-width: $desktop) {
         padding: 30px;
         margin-bottom: 15px;
       }
@@ -100,6 +129,10 @@
       @media only screen and (max-width: mobileOnly) {
         position: relative;
         max-width: inherit;
+      }
+
+      @media only screen and (min-width: $tablet) {
+        margin: 0;
       }
     }
 
